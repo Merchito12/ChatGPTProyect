@@ -3,23 +3,30 @@
     "name": "chatgpt2025",
     "slug": "chatgpt2025",
     "version": "1.0.0",
+    "entryPoint": "./app/main/chat.tsx",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.merchito12.chatgpt2025",
+      "runtimeVersion": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.merchito12.chatgpt2025",
+      "runtimeVersion": {
+        "policy": "appVersion"
       }
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
+      "output": "single",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
@@ -36,6 +43,17 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "9220fa84-139f-4585-ac06-1811ae764687"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/9220fa84-139f-4585-ac06-1811ae764687"
     }
   }
 }
