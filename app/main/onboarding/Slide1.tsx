@@ -20,7 +20,7 @@ export default function Slide1() {
 
       <TouchableOpacity 
         style={styles.nextButton}
-        onPress={() => router.push('/main/onboarding/Slide2')}
+        onPress={() => router.push('./Slide2')}
       >
         <Text style={styles.nextButtonText}>Siguiente</Text>
       </TouchableOpacity>

@@ -1,23 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { 
-  View, 
-  Text, 
-  TouchableOpacity,
-  FlatList,
-  StyleSheet
-} from 'react-native';
+import { View, Text, TouchableOpacity,FlatList,StyleSheet} from 'react-native';
 import { useRouter } from 'expo-router';
 import { useAuth } from '../context/authcontext/authcontext';
 import { db } from '../utils/FirebaseConfig';
 import { collection, query, where, getDocs, addDoc } from 'firebase/firestore/lite';
 
-interface ChatData {
-  id: string;
-  title: string;
-  userId: string;
-  messages?: any[];
-  created_at?: any;
-}
+interface ChatData {id: string;title: string;userId: string;messages?: any[];created_at?: any;}
 
 export default function Dashboard() {
   const router = useRouter();
@@ -30,10 +18,7 @@ export default function Dashboard() {
 
     const fetchChats = async () => {
       try {
-        const q = query(
-          collection(db, 'chats'),
-          where('userId', '==', currentUser.uid)
-        );
+        const q = query(collection(db, 'chats'),where('userId', '==', currentUser.uid));
         const querySnapshot = await getDocs(q);
 
         const userChats: ChatData[] = querySnapshot.docs.map(doc => ({
@@ -46,7 +31,6 @@ export default function Dashboard() {
         console.error('Error al obtener chats:', error);
       }
     };
-
     fetchChats();
   }, [currentUser]);
 

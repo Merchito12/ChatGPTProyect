@@ -5,10 +5,7 @@ import { AuthProvider } from './context/authcontext/authcontext';
 export default function RootLayout() {
   return (
     <AuthProvider>
-      {/* 
-         <Slot> se encargará de renderizar lo que haya en (auth)/_layout.tsx 
-         o (main)/_layout.tsx, según la ruta que se visite 
-      */}
+      {/* Slot para renderizar las rutas */}
       <Slot />
     </AuthProvider>
   );
