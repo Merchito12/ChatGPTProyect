@@ -1,4 +1,4 @@
-# Proyecto de Aplicación de Chat con IA
+# Proyecto replica de CHATGPT
 
 ## Descripción
 Este proyecto es una aplicación basada en ChatGPT que utiliza la API de Gemini para generar respuestas de IA en tiempo real dentro de un entorno de chat. La aplicación se desarrolla con **React**, **Expo Go** y **Expo Router**. Se conecta a **Firebase** para la gestión de usuarios y almacenamiento de datos, y utiliza contextos para envolver al aplicativo con la información de autenticación y estado global.
@@ -17,5 +17,3 @@ Este proyecto es una aplicación basada en ChatGPT que utiliza la API de Gemini 
 - **API de Gemini**: Se usa para obtener respuestas de inteligencia artificial para el chat.
 - **Firebase**: Plataforma que proporciona servicios de autenticación y base de datos en tiempo real.
 - **Context API**: Utilizada para manejar el estado global, como la información del usuario autenticado.
-
-## Instalación
